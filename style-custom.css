@@ -557,6 +557,12 @@ ul.wp-block-post-template {
 		display: none;
 	}
 
+	/* Show menu when burger is toggled open */
+	.main-navigation.toggled ul,
+	.main-navigation.toggled ul.primary-menu {
+		display: block;
+	}
+
 	/* Mobile menu items */
 	.main-navigation .primary-menu li a {
 		border: 0;
