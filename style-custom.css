@@ -75,7 +75,7 @@ a.wp-block-button__link {
 	gap: 3rem;
 }
 
-/* Hero image - full width */
+/* Hero image - full width, bottom aligned to viewport */
 .home .entry-content>.wp-block-image {
 	position: relative;
 	left: 50%;
@@ -88,8 +88,10 @@ a.wp-block-button__link {
 
 .home .entry-content>.wp-block-image img {
 	width: 100%;
-	height: 50vh;
+	height: calc(100vh - 200px);
+	min-height: 300px;
 	object-fit: cover;
+	object-position: center bottom;
 }
 
 /* Intro text section with animated side borders */
@@ -561,6 +563,11 @@ ul.wp-block-post-template {
 	.main-navigation.toggled ul,
 	.main-navigation.toggled ul.primary-menu {
 		display: block;
+	}
+
+	/* Adjust hero image height for smaller header */
+	.home .entry-content>.wp-block-image img {
+		height: calc(100vh - 120px);
 	}
 
 	/* Mobile menu items */
