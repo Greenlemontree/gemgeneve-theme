@@ -280,11 +280,9 @@ a.wp-block-button__link {
 }
 
 .home .wp-block-post-featured-image img {
-	width: 100%;
-	height: auto !important;
-	aspect-ratio: 1/1 !important;
+	width: 200px !important;
+	height: 200px !important;
 	object-fit: cover;
-	position: relative;
 }
 
 /* News title */
