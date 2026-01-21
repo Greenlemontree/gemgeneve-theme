@@ -161,6 +161,10 @@ a.wp-block-button__link {
 	padding: 0;
 }
 
+.home .site-main section {
+	border-bottom: none;
+}
+
 /* Hero intro text row */
 .home .entry-content>.wp-block-group.is-layout-flex {
 	padding: 1.5rem 2rem;
