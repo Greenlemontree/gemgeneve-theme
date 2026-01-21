@@ -248,6 +248,8 @@ a.wp-block-button__link {
 
 /* News grid - centered */
 .home .wp-block-post-template {
+	display: flex !important;
+	flex-wrap: wrap;
 	justify-content: center;
 	gap: 3rem;
 }
@@ -255,7 +257,8 @@ a.wp-block-button__link {
 /* Individual news card */
 .home .wp-block-post {
 	padding: 0;
-	max-width: 200px;
+	width: 200px;
+	flex: 0 0 200px;
 }
 
 .home .wp-block-post .wp-block-group {
