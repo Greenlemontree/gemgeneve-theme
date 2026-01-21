@@ -249,12 +249,13 @@ a.wp-block-button__link {
 /* News grid - centered */
 .home .wp-block-post-template {
 	justify-content: center;
-	gap: 2rem;
+	gap: 3rem;
 }
 
 /* Individual news card */
 .home .wp-block-post {
 	padding: 0;
+	max-width: 200px;
 }
 
 .home .wp-block-post .wp-block-group {
@@ -271,6 +272,8 @@ a.wp-block-button__link {
 /* News featured image - square */
 .home .wp-block-post-featured-image {
 	margin-bottom: 0.75rem;
+	position: relative;
+	overflow: hidden;
 }
 
 .home .wp-block-post-featured-image img {
@@ -278,6 +281,7 @@ a.wp-block-button__link {
 	height: auto !important;
 	aspect-ratio: 1/1 !important;
 	object-fit: cover;
+	position: relative;
 }
 
 /* News title */
