@@ -551,6 +551,7 @@ ul.wp-block-post-template {
 
 	/* Hide desktop nav by default */
 	.main-navigation ul,
+	.main-navigation ul.primary-menu,
 	.header-widget,
 	.header-widget-area {
 		display: none;
