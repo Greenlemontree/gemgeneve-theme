@@ -246,11 +246,10 @@ a.wp-block-button__link {
 	margin-bottom: 1.5rem;
 }
 
-/* News grid - 4 columns */
+/* News grid - centered */
 .home .wp-block-post-template {
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	gap: 1.5rem;
+	justify-content: center;
+	gap: 2rem;
 }
 
 /* Individual news card */
