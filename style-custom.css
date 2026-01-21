@@ -108,7 +108,12 @@ body {
 	font-weight: 400;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	font-family: 'Cabinet Grotesk', sans-serif;
 	font-weight: 500;
 }
@@ -169,6 +174,7 @@ a.wp-block-button__link {
 .home .entry-content>.wp-block-group.is-layout-flex {
 	padding: 1.5rem 2rem;
 	gap: 3rem;
+	font-size: 2rem;
 }
 
 /* Hero image - full width, bottom aligned to viewport */
