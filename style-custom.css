@@ -275,7 +275,8 @@ a.wp-block-button__link {
 
 .home .wp-block-post-featured-image img {
 	width: 100%;
-	aspect-ratio: 1/1;
+	height: auto !important;
+	aspect-ratio: 1/1 !important;
 	object-fit: cover;
 }
 
