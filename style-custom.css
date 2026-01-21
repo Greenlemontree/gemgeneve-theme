@@ -1,24 +1,28 @@
-/* GEM STYLES */
+/* ============================================
+   GEM GENEVE - Custom Styles
+   ============================================ */
 
+/* --------------------------------------------
+   FONTS
+   -------------------------------------------- */
 @font-face {
 	font-family: 'Montserrat';
 	src: url(webfonts/montserrat.woff2);
 }
 
+/* --------------------------------------------
+   BASE STYLES
+   -------------------------------------------- */
 html {
 	scroll-behavior: smooth;
 }
-
 
 body {
 	font-family: 'Montserrat';
 }
 
 a,
-a:visited {
-	color: black;
-}
-
+a:visited,
 a:hover {
 	color: black;
 }
@@ -28,9 +32,9 @@ a.wp-block-button__link {
 	font-size: inherit;
 }
 
-
-/* TYPOGRAPHY */
-
+/* --------------------------------------------
+   TYPOGRAPHY
+   -------------------------------------------- */
 .posted-on,
 .posted-on a {
 	font-weight: bold;
@@ -50,11 +54,88 @@ a.wp-block-button__link {
 	border: 0;
 }
 
-
-
-
 .home .entry-title {
 	display: none;
+}
+
+.site-main {
+	padding: 0 2rem 2rem 2rem;
+}
+
+/* --------------------------------------------
+   HOMEPAGE - Hero Section
+   -------------------------------------------- */
+.home .site-main {
+	padding: 0;
+}
+
+/* Hero intro text row */
+.home .entry-content>.wp-block-group.is-layout-flex {
+	padding: 1.5rem 2rem;
+	gap: 3rem;
+}
+
+/* Hero image - full width */
+.home .entry-content>.wp-block-image {
+	position: relative;
+	left: 50%;
+	margin-left: -50vw;
+	margin-right: -50vw;
+	width: 100vw;
+	max-width: 100vw;
+	margin-top: 1rem;
+}
+
+.home .entry-content>.wp-block-image img {
+	width: 100%;
+	height: 50vh;
+	object-fit: cover;
+}
+
+/* Intro text section with animated side borders */
+.intro-animation-wrapper {
+	position: relative;
+	max-width: 800px;
+	margin: 4rem auto !important;
+}
+
+.home .entry-content p.intro {
+	border: none;
+	padding: 3rem 2rem;
+	margin: 0 !important;
+}
+
+.intro-border {
+	position: absolute;
+	top: 0;
+	width: 1px;
+	height: 100%;
+	background-color: black;
+}
+
+.intro-border-left {
+	left: 0;
+}
+
+.intro-border-right {
+	right: 0;
+}
+
+#secondary.widget-area {
+	border-top: 1px solid;
+	padding: 2rem;
+}
+
+/* --------------------------------------------
+   HEADER - Base Structure
+   -------------------------------------------- */
+.site-header {
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+	background-color: white;
+	padding: 1rem 2rem;
+	transition: padding 0.3s ease, box-shadow 0.3s ease;
 }
 
 .site-header .nav-container {
@@ -63,53 +144,18 @@ a.wp-block-button__link {
 	align-items: stretch;
 }
 
-.site-branding {}
-
-.main-navigation {
-	display: flex;
-}
-
-.header-widget {}
-
-
-
+/* Nav group - column layout with menu on top, CTA button bottom right */
 .nav-group {
 	display: flex;
 	flex-direction: column;
+	align-items: flex-end;
 	justify-content: space-between;
+	height: 100%;
 }
 
-.widget {}
-
-.site-main {
-	padding: 0 2rem 2rem 2rem;
-}
-
-
-
-#secondary.widget-area {
-	border-top: 1px solid;
-	padding: 2rem;
-}
-
-/* HEADER */
-
-.site-header {
-	/* border-bottom: 1px solid black; */
-	padding: 1rem 2rem;
-}
-
-h1.site-title a,
-p.site-title a {
-	display: block;
-	width: 250px;
-	height: 120px;
-	background: url(images/gem-geneve_logo_noir.svg) no-repeat center center;
-	background-size: contain;
-	text-indent: -5000px;
-
-}
-
+/* --------------------------------------------
+   HEADER - Logo
+   -------------------------------------------- */
 h1.site-title,
 p.site-title {
 	margin: 0 0 0.5rem 0;
@@ -118,111 +164,215 @@ p.site-title {
 	font-size: 1rem;
 }
 
+h1.site-title a,
+p.site-title a {
+	display: block;
+	width: 125px;
+	height: 60px;
+	background: url(images/gem-geneve_logo_noir.svg) no-repeat center center;
+	background-size: contain;
+	text-indent: -5000px;
+	transition: width 0.3s ease, height 0.3s ease;
+}
+
 .site-description {
 	display: none;
 }
 
-/* NAVIGATION */
+/* --------------------------------------------
+   HEADER - Primary Navigation
+   -------------------------------------------- */
 .main-navigation {
+	display: flex;
 	width: auto;
 }
 
-.main-navigation li {}
-
-.main-navigation .primary-menu li a {
-	padding: 0.5em 1.2em;
-	color: black;
-	font-size: 1.05rem;
-	text-transform: uppercase;
-	border-bottom: 1px solid transparent;
+/* Main menu container */
+.main-navigation ul.primary-menu {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	gap: 0;
 }
 
-.main-navigation .primary-menu li.main-navigation-external a {}
+/* Main menu items - column layout with dividers */
+.main-navigation ul.primary-menu>li {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	border-left: 1px solid rgba(0, 0, 0, 0.2);
+	padding: 0;
+}
 
+.main-navigation ul.primary-menu>li:last-child {
+	border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+/* Main menu links */
+.main-navigation ul.primary-menu>li>a {
+	padding: 0.8em 1.5em;
+	color: black;
+	font-size: 0.85rem;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	border: none;
+}
+
+.main-navigation ul.primary-menu>li>a:hover,
+.main-navigation ul.primary-menu>li.current-menu-item>a,
+.main-navigation ul.primary-menu>li.current-menu-ancestor>a {
+	border: none;
+}
+
+/* External link indicator */
 .main-navigation .primary-menu li.main-navigation-external a:after {
 	content: " ➤";
 }
 
-.main-navigation ul.primary-menu ul {
-	display: block;
-	background-color: white;
-	border-top: 1px solid black;
-	margin-top: -1px;
+/* --------------------------------------------
+   HEADER - Submenus (Expanded State)
+   Subcategories visible inline below parent
+   -------------------------------------------- */
+.main-navigation ul.primary-menu ul.sub-menu {
+	position: static;
+	display: flex;
+	flex-direction: column;
+	background-color: transparent;
+	box-shadow: none;
+	border: none;
+	margin: 0;
+	padding: 0 0 0.5em 0;
+	opacity: 1;
+	visibility: visible;
+	max-height: 500px;
+	overflow: hidden;
+	transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease, visibility 0.3s ease;
+	float: none;
+	width: auto;
 }
 
-.main-navigation ul.primary-menu ul li a {
-	border: 0;
-	border-right: 1px solid black;
-	border-left: 1px solid black;
-	border-bottom: 1px solid transparent;
-	width: auto;
-	font-size: 1rem;
+.main-navigation ul.primary-menu ul.sub-menu li {
+	width: 100%;
+}
+
+.main-navigation ul.primary-menu ul.sub-menu li a {
+	padding: 0.3em 1.5em;
+	font-size: 0.8rem;
+	font-weight: 400;
 	text-transform: none;
 	white-space: nowrap;
+	border: none;
 }
 
-.main-navigation ul.primary-menu ul li:last-of-type a {
-	border-bottom: 1px solid black;
+.main-navigation ul.primary-menu ul.sub-menu li a:hover {
+	background-color: transparent;
 }
 
-/* .main-navigation ul ul li:last-of-type{
-	border-right: 0;
-} */
-
-.main-navigation ul.primary-menu li a:hover,
-.main-navigation ul.primary-menu li.current-menu-item>a,
-.main-navigation ul.primary-menu li.current-menu-ancestor>a {
-	border-bottom: 1px solid black;
+/* --------------------------------------------
+   HEADER - Collapsed State (When Scrolled)
+   -------------------------------------------- */
+.site-header.header-collapsed {
+	padding: 0.5rem 2rem;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* SECONDARY NAVIGATION */
+/* Smaller logo when collapsed */
+.site-header.header-collapsed h1.site-title a,
+.site-header.header-collapsed p.site-title a {
+	width: 100px;
+	height: 40px;
+}
+
+/* Hide submenus when collapsed */
+.site-header.header-collapsed .main-navigation ul.primary-menu ul.sub-menu {
+	max-height: 0;
+	opacity: 0;
+	padding: 0;
+	overflow: hidden;
+	visibility: hidden;
+}
+
+/* Disable hover dropdowns when collapsed */
+.site-header.header-collapsed .main-navigation ul li:hover>ul,
+.site-header.header-collapsed .main-navigation ul li.focus>ul {
+	display: none;
+	visibility: hidden;
+	opacity: 0;
+	max-height: 0;
+}
+
+/* Hide header widget area when collapsed */
+.site-header.header-collapsed .header-widget-area {
+	display: none;
+}
+
+/* --------------------------------------------
+   HEADER - CTA Button (Ticketing Soon)
+   Now inline with main navigation
+   -------------------------------------------- */
+.header-widget-area {
+	display: flex;
+	align-items: flex-start;
+	padding-top: 0;
+	transition: opacity 0.3s ease;
+}
+
 .header-widget {
 	display: flex;
-	justify-content: flex-end;
-	align-items: stretch;
-	padding-top: 0.5rem;
+	align-items: flex-start;
+	padding-top: 0;
 }
 
 .header-widget .widget {
-	border-left: 1px solid black;
-	padding-left: 1rem;
-	margin-left: 1rem;
-	margin-bottom: 0;
-	display: flex;
-	align-items: center;
-}
-
-.header-widget .menu {
-	margin: 0;
+	border: none;
 	padding: 0;
-	list-style: none;
+	margin: 0;
 	display: flex;
-}
-
-.header-widget .menu li a {
-	display: inline-block;
-	padding: 0.25em 1em;
-	color: black;
-	text-decoration: none;
-	font-size: 0.8rem;
-}
-
-.wp-block-social-links {
-	margin-bottom: 0;
+	align-items: flex-start;
 }
 
 .header-widget .widget h4 {
 	margin: 0;
 }
 
-.header-widget .wp-block-button__link {
-	font-size: 0.9rem;
+/* Hide secondary menu items (Partners, Press, Contact) - move to footer via WordPress */
+.header-widget .menu {
+	display: none;
 }
 
-/* RESPONSIVE NAVIGATION */
-.menu-toggle {
+/* Hide social media icons in header */
+.header-widget .wp-block-social-links,
+.wp-block-social-links {
+	display: none;
+}
+
+/* Style the CTA button */
+.header-widget .wp-block-button {
+	margin: 0;
+}
+
+.header-widget .wp-block-button__link {
+	font-size: 0.85rem;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	padding: 0.8em 1.5em;
+	border: 1px solid black;
 	background-color: transparent;
-	background: url(images/burger-off.svg) no-repeat center center;
+	color: black;
+}
+
+.header-widget .wp-block-button__link:hover {
+	background-color: black;
+	color: white;
+}
+
+/* --------------------------------------------
+   HEADER - Mobile Navigation
+   -------------------------------------------- */
+.menu-toggle {
+	display: none;
+	background: url(images/burger-off.svg) no-repeat center center transparent;
 	background-size: contain;
 	width: 60px;
 	height: 60px;
@@ -234,17 +384,12 @@ p.site-title {
 	z-index: 1500;
 }
 
-.main-navigation.toggled .menu-toggle {
-	position: fixed;
-}
-
 .toggled .menu-toggle {
 	background-image: url(images/burger-on.svg);
 }
 
-.main-navigation.toggled ul,
-.main-navigation.toggled .header-widget {
-	display: block;
+.main-navigation.toggled .menu-toggle {
+	position: fixed;
 }
 
 .main-navigation.toggled {
@@ -260,70 +405,22 @@ p.site-title {
 	overflow-y: auto;
 }
 
-@media screen and (max-width: 1200px) {
-	.menu-toggle {
-		display: block;
-	}
-
-	.nav-group {
-		flex-direction: column-reverse;
-	}
-
-	.main-navigation ul,
-	.header-widget {
-		display: none;
-	}
-
-	.main-navigation .primary-menu li a {
-		border: 0 !important;
-		padding: 0.5em 0;
-	}
-
-	.main-navigation .primary-menu {
-		margin-bottom: 2rem;
-	}
-
-	.header-widget .widget {
-		border-left: 0px solid black;
-		padding-left: 0rem;
-		margin-left: 0rem;
-		margin-bottom: 2rem;
-	}
-
-	.header-widget .menu li a {
-		padding: 0.5em 0;
-	}
-
-	.main-navigation ul ul {
-		position: static;
-		float: none;
-		box-shadow: none;
-		padding-left: 1rem;
-	}
-
-	.main-navigation ul.primary-menu ul {
-		border-top: 0;
-	}
-
-	.main-navigation ul.primary-menu ul li a {
-		padding: 0.2em 0;
-		font-size: 0.85em;
-	}
-
-	h1.site-title a,
-	p.site-title a {
-		width: 150px;
-		height: 70px;
-	}
+.main-navigation.toggled ul,
+.main-navigation.toggled .header-widget {
+	display: block;
 }
 
-/* WORDPRESS BLOCKS */
+/* --------------------------------------------
+   WORDPRESS BLOCKS
+   -------------------------------------------- */
 ul.wp-block-post-template {
 	margin: 0;
 	padding: 0;
 }
 
-/* CATEGORY NEWS */
+/* --------------------------------------------
+   ARCHIVE - News Grid
+   -------------------------------------------- */
 .archive-grid {
 	display: flex;
 	flex-wrap: wrap;
@@ -338,14 +435,18 @@ ul.wp-block-post-template {
 	width: 100%;
 }
 
-/* SINGLE NEWS */
+/* --------------------------------------------
+   SINGLE - News
+   -------------------------------------------- */
 .single.category-news .site-main article {
 	max-width: 1200px;
 	margin-left: auto;
 	margin-right: auto;
 }
 
-/* ARCHIVE EXHIBITORS */
+/* --------------------------------------------
+   ARCHIVE - Exhibitors
+   -------------------------------------------- */
 .archive-grid-exhibitors {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(31%, 1fr));
@@ -367,10 +468,7 @@ ul.wp-block-post-template {
 	margin-bottom: 0;
 }
 
-.post-type-archive-exhibitor .archive-grid {}
-
 .post-type-archive-exhibitor .archive-grid article {
-
 	margin-bottom: 3rem;
 	position: relative;
 }
@@ -380,7 +478,6 @@ ul.wp-block-post-template {
 }
 
 .post-type-archive-exhibitor .archive-grid article .entry-header {
-
 	position: absolute;
 	left: 0;
 	bottom: 0;
@@ -388,7 +485,9 @@ ul.wp-block-post-template {
 	padding: 0.5rem;
 }
 
-/* SINGLE EXHIBITORS */
+/* --------------------------------------------
+   SINGLE - Exhibitors
+   -------------------------------------------- */
 .exhibitor-info-box {
 	border-top: 1px solid black;
 	border-bottom: 1px solid black;
@@ -408,20 +507,9 @@ ul.wp-block-post-template {
 	width: 100%;
 }
 
-@media only screen and (min-width: 960px) {
-	.single-exhibitor-layout {
-		display: flex;
-		justify-content: space-between;
-	}
-
-	.single-exhibitor-layout-col {
-		width: 48%;
-	}
-}
-
-
-/* FOOTER */
-
+/* --------------------------------------------
+   FOOTER
+   -------------------------------------------- */
 .site-footer {
 	padding: 2rem;
 	border-top: 1px solid;
@@ -447,154 +535,93 @@ ul.wp-block-post-template {
 	font-weight: bold;
 }
 
+/* --------------------------------------------
+   RESPONSIVE - Tablet and below
+   -------------------------------------------- */
+@media screen and (max-width: 1400px) {
 
-/* ============================================
-   EXPANDED HEADER NAVIGATION
-   Header starts expanded with subcategories visible,
-   collapses when user scrolls
-   ============================================ */
+	/* Mobile menu toggle */
+	.menu-toggle {
+		display: block;
+	}
 
-/* Header wrapper - sticky behavior */
-.site-header {
-	position: sticky;
-	top: 0;
-	z-index: 1000;
-	background-color: white;
-	transition: all 0.3s ease;
-}
+	.nav-group {
+		flex-direction: column-reverse;
+	}
 
-/* Navigation layout for expanded state */
-.main-navigation ul.primary-menu {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: flex-start;
-	gap: 0;
-}
+	/* Hide desktop nav by default */
+	.main-navigation ul,
+	.header-widget,
+	.header-widget-area {
+		display: none;
+	}
 
-/* Main menu items container - horizontal layout with dividers */
-.main-navigation ul.primary-menu > li {
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	border-left: 1px solid rgba(0, 0, 0, 0.2);
-	padding: 0;
-}
+	/* Mobile menu items */
+	.main-navigation .primary-menu li a {
+		border: 0;
+		padding: 0.5em 0;
+	}
 
-.main-navigation ul.primary-menu > li:last-child {
-	border-right: 1px solid rgba(0, 0, 0, 0.2);
-}
+	.main-navigation .primary-menu {
+		margin-bottom: 2rem;
+	}
 
-/* Main navigation link styling */
-.main-navigation ul.primary-menu > li > a {
-	padding: 0.8em 1.5em;
-	font-size: 0.85rem;
-	font-weight: 500;
-	letter-spacing: 0.05em;
-}
-
-/* EXPANDED STATE - Subcategories visible inline below parent */
-.main-navigation ul.primary-menu ul.sub-menu {
-	position: static;
-	display: flex !important;
-	flex-direction: column;
-	background-color: transparent;
-	box-shadow: none;
-	border: none;
-	margin: 0;
-	padding: 0 0 0.5em 0;
-	opacity: 1;
-	visibility: visible;
-	max-height: 500px;
-	overflow: hidden;
-	transition: max-height 0.4s ease, opacity 0.3s ease, padding 0.3s ease;
-}
-
-.main-navigation ul.primary-menu ul.sub-menu li {
-	width: 100%;
-}
-
-.main-navigation ul.primary-menu ul.sub-menu li a {
-	padding: 0.3em 1.5em;
-	font-size: 0.8rem;
-	text-transform: none;
-	font-weight: 400;
-	border: none !important;
-	white-space: nowrap;
-}
-
-.main-navigation ul.primary-menu ul.sub-menu li a:hover {
-	background-color: transparent;
-}
-
-/* COLLAPSED STATE - When scrolled */
-.site-header.header-collapsed .main-navigation ul.primary-menu ul.sub-menu {
-	max-height: 0;
-	opacity: 0;
-	padding: 0;
-	overflow: hidden;
-}
-
-/* Collapsed header - more compact */
-.site-header.header-collapsed {
-	padding: 0.5rem 2rem;
-	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.site-header.header-collapsed .site-branding h1.site-title a,
-.site-header.header-collapsed .site-branding p.site-title a {
-	width: 150px;
-	height: 50px;
-}
-
-/* Ensure dropdown appears on hover in collapsed state */
-.site-header.header-collapsed .main-navigation ul.primary-menu > li:hover > ul.sub-menu {
-	position: absolute;
-	top: 100%;
-	left: 0;
-	max-height: 500px;
-	opacity: 1;
-	padding: 0.5em 0;
-	background-color: white;
-	border: 1px solid black;
-	border-top: none;
-	min-width: 200px;
-	z-index: 1001;
-}
-
-.site-header.header-collapsed .main-navigation ul.primary-menu > li:hover > ul.sub-menu li a {
-	padding: 0.5em 1.5em;
-}
-
-/* Hide header widget in collapsed state for cleaner look */
-.site-header.header-collapsed .header-widget-area {
-	display: none;
-}
-
-/* Transition for smooth animation */
-.site-header .site-branding h1.site-title a,
-.site-header .site-branding p.site-title a {
-	transition: width 0.3s ease, height 0.3s ease;
-}
-
-.header-widget-area {
-	transition: opacity 0.3s ease;
-}
-
-/* Responsive adjustments */
-@media screen and (max-width: 1200px) {
-	/* Reset expanded styles for mobile */
+	/* Mobile submenus - always visible */
 	.main-navigation ul.primary-menu ul.sub-menu {
 		position: static;
 		max-height: none;
 		opacity: 1;
+		padding-left: 1rem;
+		box-shadow: none;
 	}
 
+	.main-navigation ul.primary-menu ul.sub-menu li a {
+		padding: 0.2em 0;
+		font-size: 0.85em;
+	}
+
+	/* Keep submenus visible even in collapsed state on mobile */
 	.site-header.header-collapsed .main-navigation ul.primary-menu ul.sub-menu {
 		max-height: none;
 		opacity: 1;
+		visibility: visible;
 	}
 
-	.main-navigation ul.primary-menu > li {
+	/* Remove dividers on mobile */
+	.main-navigation ul.primary-menu>li {
 		border: none;
+	}
+
+	/* Mobile header widget */
+	.header-widget .widget {
+		border-left: 0;
+		padding-left: 0;
+		margin-left: 0;
+		margin-bottom: 2rem;
+	}
+
+	.header-widget .menu li a {
+		padding: 0.5em 0;
+	}
+
+	/* Smaller logo on mobile */
+	h1.site-title a,
+	p.site-title a {
+		width: 150px;
+		height: 70px;
+	}
+}
+
+/* --------------------------------------------
+   RESPONSIVE - Desktop (Exhibitors layout)
+   -------------------------------------------- */
+@media only screen and (min-width: 960px) {
+	.single-exhibitor-layout {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.single-exhibitor-layout-col {
+		width: 48%;
 	}
 }
