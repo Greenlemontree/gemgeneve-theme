@@ -225,15 +225,16 @@ a.wp-block-button__link {
    -------------------------------------------- */
 .home .wp-block-query {
 	padding: 0 2rem;
+	border-top: 1px solid black;
+	padding-top: 2rem;
+	margin-top: 2rem;
 }
 
-/* News section title with underline */
+/* News section title */
 .home .wp-block-query h2 {
 	font-size: 1.2rem;
 	font-weight: 700;
-	margin-bottom: 0.5rem;
-	padding-bottom: 1rem;
-	border-bottom: 2px solid black;
+	margin-bottom: 1.5rem;
 }
 
 /* News grid */
