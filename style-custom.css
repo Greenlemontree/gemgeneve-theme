@@ -5,9 +5,95 @@
 /* --------------------------------------------
    FONTS
    -------------------------------------------- */
+
+/* Cabinet Grotesk */
+@font-face {
+	font-family: 'Cabinet Grotesk';
+	src: url(webfonts/CabinetGrotesk-Light.woff2) format('woff2');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Cabinet Grotesk';
+	src: url(webfonts/CabinetGrotesk-Regular.woff2) format('woff2');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Cabinet Grotesk';
+	src: url(webfonts/CabinetGrotesk-Medium.woff2) format('woff2');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Cabinet Grotesk';
+	src: url(webfonts/CabinetGrotesk-Bold.woff2) format('woff2');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* Satoshi */
+@font-face {
+	font-family: 'Satoshi';
+	src: url(webfonts/Satoshi-Regular.woff2) format('woff2');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Satoshi';
+	src: url(webfonts/Satoshi-Italic.woff2) format('woff2');
+	font-weight: 400;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Satoshi';
+	src: url(webfonts/Satoshi-Medium.woff2) format('woff2');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Satoshi';
+	src: url(webfonts/Satoshi-Bold.woff2) format('woff2');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Satoshi';
+	src: url(webfonts/Satoshi-Black.woff2) format('woff2');
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* Satoshi Variable (alternative - all weights in one file) */
+@font-face {
+	font-family: 'Satoshi Variable';
+	src: url(webfonts/Satoshi-Variable.woff2) format('woff2');
+	font-weight: 300 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* Montserrat (legacy) */
 @font-face {
 	font-family: 'Montserrat';
-	src: url(webfonts/montserrat.woff2);
+	src: url(webfonts/montserrat.woff2) format('woff2');
+	font-display: swap;
 }
 
 /* --------------------------------------------
@@ -18,7 +104,13 @@ html {
 }
 
 body {
-	font-family: 'Montserrat';
+	font-family: 'Satoshi', sans-serif;
+	font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Cabinet Grotesk', sans-serif;
+	font-weight: 500;
 }
 
 a,
